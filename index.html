@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+    <html xmlns="http://www.w3.org/1999/xhtml"></html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="static/image/icon.ico">
+    <meta name="description" content="">
+    <title>Zhou-Lab AGIS</title>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="static/css/main.css">
+    <!-- Custom CSS -->
+    <link href="static/css/top_button.css" rel="stylesheet">
+    <link href="static/css/index.css" rel="stylesheet">
+    <link href="static/js/index.js" rel="stylesheet">
+    <link href="static/js/jqBootstrapValidation.js" rel="stylesheet">
+    <style>
+    .imageRotation{
+        height:600px;
+        width:100%;
+        overflow:hidden;  /*--超出容器的所有元素都不可见--*/
+        position:relative;  /*--相对定位--*/
+        border:10px solid #eee;
+        background-color:#eee;
+        border-radius: 5px;
+        -webkit-border-radius:5px;
+        -moz-border-radius:5px;
+	}
+
+.imageBox{
+	position:absolute;  /*--固定定位--*/
+	height:100%;
+	top:0px;
+	left:0px;
+	overflow:hidden;
+	}
+.imageBox img {
+	display:block;
+	height:570px;
+	width:20%;
+	float:left;
+	border:none;
+	}
+
+.icoBox{
+	position:absolute;  /*--固定定位--*/
+	bottom:4px;
+	left:50%;
+	width:76px;
+	height:12px;
+	text-align:center;
+	line-height:40px;
+	}
+.icoBox span{
+	display:block;
+	float:left;
+	height:12px;
+	width:12px;
+	margin-left:3px;
+	overflow:hidden;
+	background:url("images/ico.png") 0px 0px no-repeat;
+	cursor:pointer;
+	}
+.icoBox span.active {
+	background-position:0px -12px;
+	cursor:default;
+	}
+    </style>
+</head>
+
+<body>
+    <!-- top -->
+    <div class="top_whole">
+        <ul class="menu_list" >
+            <li ><a href="index.html">Home</a></li>
+            <li ><a href="people.html" >People</a></li>
+            <li ><a href="research.html">Research</a></li>
+            <li ><a href="publication.html">Publications</a></li>
+            <li ><a href="*">Lab Docs</a></li>
+            <li ><a href="journal.html">Journal club</a></li>
+            <li > <a href="news.html">News</a></li>
+            <li ><a href="press.html">Press</a></li>
+            <li ><a href="join.html">Join us</a></li>
+            <li ><a href="album.html">Album</a></li>
+            <li ><a href="introduction.html">中文</a></li>
+        </ul>
+    </div>
+    <!-- left box -->
+    <div class="left" >  
+        <div class="imageRotation">	
+            <div class="imageBox">
+                <img src="images/5.jpeg" />
+                <img src="images/4.JPG" />
+                <img src="images/3.JPG" />
+                <img src="images/2.JPG" />
+                <img src="images/1.JPG" />
+            </div>
+            <div class="icoBox">
+                <span class="active" rel="1">1</span>
+                <span rel="2">2</span>
+                <span rel="3">3</span>
+                <span rel="4">4</span>
+                <span rel="5">5</span>
+            </div>
+        </div>
+        
+    </div>
+    <!-- right box -->
+    <div class="right">
+    <h1 class="title">Introduction</h1>
+    <br>
+    <p>We are from the Institute of Genomics, Chinese Academy of Agricultural Sciences. We detect adaptive variation, harmful variation and structural variation related to key agronomic traits by using machine learning and artificial intelligence algorithms combined with big data such as multi-omics and climate environment. Furthermore, crisPR-CAS9 enables functional genomics analysis and rapid molecular breeding. Focusing on crop population genomics and intelligent breeding, the following work is mainly carried out :(1) collection, preservation, evaluation and innovation of rice, grape and other crop germplasm resources; (2) Genetic basis of important agronomic traits; (3) Machine learning and crop genome design and breeding.
+    </p>
+    </div>
+    <script type="text/javascript" src="http://www.itxueyuan.org/uploads/javascript/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".imageRotation").each(function(){
+                // 获取有关参数
+                var imageRotation = this,  // 取得 图片轮换容器
+                    imageBox = $(imageRotation).children(".imageBox")[0],  // 取得 图片容器
+                    icoBox = $(imageRotation).children(".icoBox")[0],  // 取得 图标容器
+                    icoArr = $(icoBox).children(),  // 取得所有图标，并保存为数组
+                    imageWidth = $(imageRotation).width(),  // 图片宽度
+                    imageNum = $(imageBox).children().size(),  // 图片数量
+                    imageReelWidth = imageWidth*imageNum,  // 图片容器宽度
+                    activeID = parseInt($($(icoBox).children(".active")[0]).attr("rel")),  // 当前图片ID
+                    nextID = 0,  // 下张图片ID
+                    setIntervalID,  // setInterval() 函数ID
+                    intervalTime = 6000,  // 间隔时间
+                    speed =600;  // 执行速度
+                
+                // 设置 图片容器 的宽度
+                $(imageBox).css({'width' : imageReelWidth + "px"});
+                
+                // 图片轮换函数
+                var rotate=function(clickID){
+                    if(clickID){ nextID = clickID; }
+                    else{ nextID=activeID<=3 ? activeID+1 : 1; }
+                    
+                    $(icoArr[activeID-1]).removeClass("active");
+                    $(icoArr[nextID-1]).addClass("active");
+                    $(imageBox).animate({left:"-"+(nextID-1)*imageWidth+"px"} , speed);
+                    
+                    activeID = nextID;
+                }
+                setIntervalID=setInterval(rotate,intervalTime);
+                
+                $(imageBox).hover(
+                    function(){ clearInterval(setIntervalID); },
+                    function(){ setIntervalID=setInterval(rotate,intervalTime); }
+                );	
+                
+                $(icoArr).click(function(){
+                    clearInterval(setIntervalID);
+                    var clickID = parseInt($(this).attr("rel"));
+                    rotate(clickID);
+                    setIntervalID=setInterval(rotate,intervalTime);
+                });
+            });
+        });
+        </script>
+</body>
+ <!-- Footer -->
+<footer class="foot">
+        <p class="text-white">Copyright &copy; Your Website 2021</p>
+        <p class="text-white">发布时间 &copy; 2021 - 2021</p>
+        <p class="text-center text-white">版权所有：Zhou-Lab - AGIS</p>
+    </div>
+</footer>
+</html>

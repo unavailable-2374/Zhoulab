@@ -1,0 +1,126 @@
+.top{
+    margin-top: 1%;
+    margin-left: 15%;
+    height: 100%;
+    width: 70%;
+    margin-bottom: 8%;
+}
+.top h1{
+    font-size: 120%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 18%;
+}
+.top p{
+    text-indent: 1em;
+    margin-left: 18%;
+    font-size: 120%;
+    line-height: 150%;
+    color: #616161;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.middle{
+    margin-top: 1%;
+    margin-left: 15%;
+    height: 100%;
+    width: 70%;
+    margin-bottom: 8%;
+}
+.middle h1{
+    font-size: 120%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 18%;
+}
+.middle p{
+    margin-top: 0.5%;
+    text-indent: 1em;
+    margin-left: 18%;
+    font-size: 120%;
+    line-height: 150%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #616161;
+}
+.left{
+    float: left;
+    margin-top: 1%;
+    margin-left: 15%;
+    height: 100%;
+    width: 32%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    border-radius: 5px;
+    padding-left: 2%;
+    border-radius: 10px;
+    margin-bottom: 1%;
+}
+.right{
+    float: right;
+    margin-top: 1%;
+    margin-right: 15%;
+    height: 100%;
+    width: 32%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    border-radius: 5px;
+    padding-left: 2%;
+    border-radius: 10px;
+    margin-bottom: 1%;
+}
+
+.LP{
+    margin-top: 1%;
+    padding: 1.5%;
+    margin-right: 4%;
+    padding-bottom: 4%;
+    padding-top: 4%;
+    background-color:white;
+    width: 95%;
+    height: 8%;
+    overflow:hidden;
+}
+.image{
+    border:none;
+    border-radius: 5px;
+    height: 100%;
+    width:15%;
+    float: left;
+}
+.LP p{
+    text-indent: 1em;
+    margin-left: 23%;
+    font-size: 120%;
+    line-height: 150%;
+    color: #616161;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.LP h1{
+    font-size: 120%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 22%;
+}
+.RP{
+    margin-top: 1%;
+    padding: 1.5%;
+    margin-right: 4%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    background-color:white;
+    width: 95%;
+    height: 8%;
+    overflow:hidden;
+}
+.RP p{
+    text-indent: 1em;
+    margin-left: 23%;
+    font-size: 120%;
+    line-height: 150%;
+    color: #616161;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.RP h1{
+    font-size: 120%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 22%;
+}
+p{
+    font-size: 100%;
+}

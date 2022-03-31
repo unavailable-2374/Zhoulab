@@ -1,0 +1,17 @@
+.box{
+    float: left;
+    margin-top: 3%;
+    margin-left: 15%;
+    width: 70%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 2%;
+}
+
+h1{
+    font-size: 200%;
+}
+p{
+    font-size: 150%;
+    line-height: 150%;
+    margin-left: 2em;
+}

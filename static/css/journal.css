@@ -1,0 +1,25 @@
+.paper{
+    float: left;
+    margin-top: 5%;
+    margin-left: 15%;
+    width: 70%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 25%;
+}
+.paper h1{
+    font-size: 250%;
+}
+.paper h2{
+    font-size: 200%;
+}
+
+.paper h3{
+    font-size: 160%;
+    line-height: 150%;
+    text-indent: 1em;
+    padding-left: 1%;
+    font-weight: normal;
+}
+.paper p{
+    font-size: 150%;
+}

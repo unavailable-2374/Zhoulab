@@ -1,0 +1,35 @@
+.join{
+    float: left;
+    margin-top: 4%;
+    margin-left: 15%;
+    width: 70%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 2%;
+}
+.title{
+    text-align: center;
+    font-size: 250%;
+}
+.nick{
+    text-align: center;
+    color: darkgray;
+    font-size: 150%;
+}
+h2{
+    text-indent: 2em;
+    font-size: 200%;
+}
+h3{
+    margin-left: 2em;
+    text-indent: 2em;
+    font-size: 150%;
+    line-height: 150%;
+    
+}
+h4{ 
+    margin-left: 4em;
+    text-indent: 2em;
+    font-weight: normal;
+    line-height: 150%;
+    font-size: 140%;
+}
